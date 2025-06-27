@@ -48,8 +48,7 @@ with st.sidebar:
             'deepseek-reasoner'
         ]
     model_name = st.selectbox(label ="请选择模型",options = model_options)
-    api_key = st.text_input(label ="请输入API Key",type ="password")
-
+    api_key = st.secrets['api_key']
 # 新增上传文件功能
 uploaded_file = st.file_uploader("上传文本文件", type=["txt"])
 uploaded_content = ""
