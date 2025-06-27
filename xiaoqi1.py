@@ -60,6 +60,7 @@ with st.sidebar:
         api_key = st.secrets['api_key1']
     else:
         api_key = st.secrets['api_key2']
+api_key = api_key
 # 新增上传文件功能
 uploaded_file = st.file_uploader("上传文本文件", type=["txt"])
 uploaded_content = ""
