@@ -48,7 +48,18 @@ with st.sidebar:
             'deepseek-reasoner'
         ]
     model_name = st.selectbox(label ="请选择模型",options = model_options)
-    api_key = st.secrets['api_key']
+    if model_name in {            "gpt-3.5-turbo",
+            "gpt-3.5-turbo-0301",
+            "gpt-3.5-turbo-0613",
+            "gpt-3.5-turbo-16k",
+            "gpt-3.5-turbo-16k-0613",
+            "gpt-4",
+            "gpt-4-0314",
+            "gpt-4-0613",
+            "gpt-4-32k",}:
+        api_key = st.secrets['api_key1']
+    else:
+        api_key = st.secrets['api_key2']
 # 新增上传文件功能
 uploaded_file = st.file_uploader("上传文本文件", type=["txt"])
 uploaded_content = ""
