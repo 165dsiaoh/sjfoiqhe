@@ -57,10 +57,9 @@ with st.sidebar:
             "gpt-4-0314",
             "gpt-4-0613",
             "gpt-4-32k",}:
-        api_key = st.secrets['api_key1']
+        api_key = st.secrets['API_KEY1']
     else:
-        api_key = st.secrets['api_key2']
-api_key = st.text_input(label=f'api_key', type='password')
+        api_key = st.secrets['API_KEY2']
 # 新增上传文件功能
 uploaded_file = st.file_uploader("上传文本文件", type=["txt"])
 uploaded_content = ""
